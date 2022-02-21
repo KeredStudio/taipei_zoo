@@ -1,0 +1,14 @@
+<resources>
+    <string name="display_areas">園區介紹</string>
+    <string name="api_failure">有地方出錯了..</string>
+    <string name="plant_list_title">植物列表</string>
+    <string name="plant_empty_message">這個園區沒有任何植物。</string>
+    <string name="plant_location_label">位置:</string>
+    <string name="plant_also_known_label">別名:</string>
+    <string name="plant_eng_name_label">英文名:</string>
+    <string name="plant_scientific_name_label">學名:</string>
+    <string name="plant_family_genus_label">分類:</string>
+    <string name="plant_brief_label">簡介:</string>
+    <string name="plant_feature_label">形態特徵:</string>
+    <string name="plant_update_time_label">更新日期:</string>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">TaipeiZoo</string>
+    <string name="display_areas">Display Areas</string>
+    <string name="api_failure">Something error happened.</string>
+    <string name="plant_list_title">Plant List</string>
+    <string name="plant_empty_message">There are no plants in this area.</string>
+    <string name="plant_location_label">Location:</string>
+    <string name="plant_also_known_label">Also known:</string>
+    <string name="plant_eng_name_label">English name:</string>
+    <string name="plant_scientific_name_label">Scientific name:</string>
+    <string name="plant_family_genus_label">Family and Genus:</string>
+    <string name="plant_brief_label">Brief:</string>
+    <string name="plant_feature_label">Feature:</string>
+    <string name="plant_update_time_label">Update time:</string>
+</resources>
