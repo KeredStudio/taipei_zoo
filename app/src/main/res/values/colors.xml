@@ -9,4 +9,5 @@
     <color name="divider">#E5E5E5</color>
     <color name="alpha_white">#DE000000</color>
     <color name="gray_50">#FAFAFA</color>
+    <color name="shimmer">#C2C2C2</color>
 </resources>

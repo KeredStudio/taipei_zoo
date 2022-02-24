@@ -112,21 +112,21 @@
                     app:layout_constraintTop_toBottomOf="@id/area_description"
                     tools:text="@string/plant_list_title" />
 
-                <ProgressBar
-                    android:id="@+id/progress_bar"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                <reynold.project.taipeizoo.ui.widget.CustomShimmerLayout
+                    android:id="@+id/shimmer_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/plant_detail_title"
+                    app:shimmerItemCount="5"
+                    app:shimmerItemLayout="@layout/list_item_shimmer"
                     tools:visibility="gone" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/plant_list_recycler_view"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
                     android:nestedScrollingEnabled="false"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"

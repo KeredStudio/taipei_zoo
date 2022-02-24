@@ -2,6 +2,7 @@ package reynold.project.taipeizoo.ui.fragment
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.DividerItemDecoration.VERTICAL
 import com.google.android.material.snackbar.Snackbar
@@ -10,19 +11,19 @@ import reynold.project.taipeizoo.databinding.FragmentAreaListBinding
 import reynold.project.taipeizoo.models.AreaList
 import reynold.project.taipeizoo.ui.adapter.AreaListAdapter
 import reynold.project.taipeizoo.ui.base.BaseFragment
+import reynold.project.taipeizoo.ui.mvp.AreaListContract
 import reynold.project.taipeizoo.ui.mvp.AreaListFragmentPresenter
-import reynold.project.taipeizoo.ui.mvp.AreaListFragmentPresenterImpl
-import reynold.project.taipeizoo.ui.mvp.AreaListFragmentView
 
-class AreaListFragment : BaseFragment<FragmentAreaListBinding, AreaListFragmentView, AreaListFragmentPresenter>(), AreaListFragmentView {
+class AreaListFragment : BaseFragment<FragmentAreaListBinding, AreaListContract.AreaListFragmentView, AreaListContract.AreaListFragmentPresenter>(),
+    AreaListContract.AreaListFragmentView {
     private lateinit var areaListAdapter: AreaListAdapter
 
     override fun getLayoutResId(): Int {
         return R.layout.fragment_area_list
     }
 
-    override fun createPresenter(): AreaListFragmentPresenter {
-        return AreaListFragmentPresenterImpl()
+    override fun createPresenter(): AreaListContract.AreaListFragmentPresenter {
+        return AreaListFragmentPresenter()
     }
 
     override fun setupViews() {
@@ -43,12 +44,14 @@ class AreaListFragment : BaseFragment<FragmentAreaListBinding, AreaListFragmentV
     }
 
     override fun showLoading() {
-        binding.swipeRefreshLayout.isRefreshing = true
+        binding.shimmerLayout.startShimmer()
     }
 
     override fun hideLoading() {
-        binding.swipeRefreshLayout.isRefreshing = false
-        binding.swipeRefreshLayout.isEnabled = false
+        binding.shimmerLayout.apply {
+            stopShimmer()
+            isVisible = false
+        }
     }
 
     override fun showAreaList(areaList: List<AreaList.Result.Detail>) {

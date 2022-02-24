@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import reynold.project.taipeizoo.databinding.ListItemAreaBinding
 import reynold.project.taipeizoo.models.AreaList
-import reynold.project.taipeizoo.ui.mvp.AreaListFragmentPresenter
+import reynold.project.taipeizoo.ui.mvp.AreaListContract
 import reynold.project.taipeizoo.util.executeAfter
 import reynold.project.taipeizoo.util.setSafeOnClickListener
 
-class AreaListAdapter(private val areaListFragmentPresenter: AreaListFragmentPresenter) :
+class AreaListAdapter(private val areaListFragmentPresenter: AreaListContract.AreaListFragmentPresenter) :
     ListAdapter<AreaList.Result.Detail, AreaListAdapter.ItemViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

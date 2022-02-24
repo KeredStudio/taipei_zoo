@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import reynold.project.taipeizoo.databinding.ListItemPlantBinding
 import reynold.project.taipeizoo.models.PlantList
-import reynold.project.taipeizoo.ui.mvp.AreaDetailFragmentPresenter
+import reynold.project.taipeizoo.ui.mvp.AreaDetailContract
 import reynold.project.taipeizoo.util.executeAfter
 import reynold.project.taipeizoo.util.setSafeOnClickListener
 
-class PlantListAdapter(private val areaDetailFragmentPresenter: AreaDetailFragmentPresenter) :
+class PlantListAdapter(private val areaDetailFragmentPresenter: AreaDetailContract.AreaDetailFragmentPresenter) :
     ListAdapter<PlantList.Result.Detail, PlantListAdapter.ItemViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

@@ -5,11 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import reynold.project.taipeizoo.databinding.ListItemPlantBinding
 import reynold.project.taipeizoo.databinding.ListItemPlantDetailBinding
 import reynold.project.taipeizoo.models.PlantDetailItem
-import reynold.project.taipeizoo.models.PlantList
-import reynold.project.taipeizoo.ui.mvp.AreaDetailFragmentPresenter
 import reynold.project.taipeizoo.util.executeAfter
 
 class PlantDetailListAdapter : ListAdapter<PlantDetailItem, PlantDetailListAdapter.ItemViewHolder>(DiffCallback()) {

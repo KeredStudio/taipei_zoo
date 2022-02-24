@@ -1,7 +1,6 @@
 package reynold.project.taipeizoo.ui.fragment
 
 import androidx.core.view.isVisible
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.DividerItemDecoration
 import reynold.project.taipeizoo.R
@@ -9,11 +8,11 @@ import reynold.project.taipeizoo.databinding.FragmentAreaDetailBinding
 import reynold.project.taipeizoo.models.PlantList
 import reynold.project.taipeizoo.ui.adapter.PlantListAdapter
 import reynold.project.taipeizoo.ui.base.BaseFragment
+import reynold.project.taipeizoo.ui.mvp.AreaDetailContract
 import reynold.project.taipeizoo.ui.mvp.AreaDetailFragmentPresenter
-import reynold.project.taipeizoo.ui.mvp.AreaDetailFragmentPresenterImpl
-import reynold.project.taipeizoo.ui.mvp.AreaDetailFragmentView
 
-class AreaDetailFragment : BaseFragment<FragmentAreaDetailBinding, AreaDetailFragmentView, AreaDetailFragmentPresenter>(), AreaDetailFragmentView {
+class AreaDetailFragment : BaseFragment<FragmentAreaDetailBinding, AreaDetailContract.AreaDetailFragmentView, AreaDetailContract.AreaDetailFragmentPresenter>(),
+    AreaDetailContract.AreaDetailFragmentView {
     private val args: AreaDetailFragmentArgs by navArgs()
     private lateinit var plantListAdapter: PlantListAdapter
 
@@ -21,8 +20,8 @@ class AreaDetailFragment : BaseFragment<FragmentAreaDetailBinding, AreaDetailFra
         return R.layout.fragment_area_detail
     }
 
-    override fun createPresenter(): AreaDetailFragmentPresenter {
-        return AreaDetailFragmentPresenterImpl()
+    override fun createPresenter(): AreaDetailContract.AreaDetailFragmentPresenter {
+        return AreaDetailFragmentPresenter()
     }
 
     override fun setupViews() {
@@ -48,11 +47,14 @@ class AreaDetailFragment : BaseFragment<FragmentAreaDetailBinding, AreaDetailFra
     }
 
     override fun showLoading() {
-        binding.progressBar.isVisible = true
+        binding.shimmerLayout.startShimmer()
     }
 
     override fun hideLoading() {
-        binding.progressBar.isVisible = false
+        binding.shimmerLayout.apply {
+            stopShimmer()
+            isVisible = false
+        }
     }
 
     override fun showPlantList(plantList: List<PlantList.Result.Detail>) {

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomShimmerLayout">
+        <attr name="shimmerItemCount" format="integer" />
+        <attr name="shimmerItemLayout" format="reference"/>
+    </declare-styleable>
+</resources>

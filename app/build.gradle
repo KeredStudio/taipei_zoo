@@ -54,6 +54,7 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpLoggingVersion"
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
     implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.facebook.shimmer:shimmer:$rootProject.shimmerVersion"
 
     testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.testExtJunit"

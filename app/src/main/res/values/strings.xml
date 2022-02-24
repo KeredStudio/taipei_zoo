@@ -12,4 +12,15 @@
     <string name="plant_brief_label">Brief:</string>
     <string name="plant_feature_label">Feature:</string>
     <string name="plant_update_time_label">Update time:</string>
+
+    <string-array name="plant_title_list">
+        <item>@string/plant_location_label</item>
+        <item>@string/plant_also_known_label</item>
+        <item>@string/plant_eng_name_label</item>
+        <item>@string/plant_scientific_name_label</item>
+        <item>@string/plant_family_genus_label</item>
+        <item>@string/plant_brief_label</item>
+        <item>@string/plant_feature_label</item>
+        <item>@string/plant_update_time_label</item>
+    </string-array>
 </resources>
