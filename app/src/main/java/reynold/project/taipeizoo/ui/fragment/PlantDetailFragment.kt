@@ -1,6 +1,7 @@
 package reynold.project.taipeizoo.ui.fragment
 
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.DividerItemDecoration
 import reynold.project.taipeizoo.R
@@ -10,6 +11,8 @@ import reynold.project.taipeizoo.ui.adapter.PlantDetailListAdapter
 import reynold.project.taipeizoo.ui.base.BaseFragment
 import reynold.project.taipeizoo.ui.mvp.PlantDetailContract
 import reynold.project.taipeizoo.ui.mvp.PlantDetailFragmentPresenter
+import reynold.project.taipeizoo.util.navigateUp
+import reynold.project.taipeizoo.util.saveDataToPreviousFragment
 
 class PlantDetailFragment : BaseFragment<FragmentPlantDetailBinding, PlantDetailContract.PlantDetailFragmentView, PlantDetailContract.PlantDetailFragmentPresenter>(),
     PlantDetailContract.PlantDetailFragmentView {
@@ -29,6 +32,7 @@ class PlantDetailFragment : BaseFragment<FragmentPlantDetailBinding, PlantDetail
 
         with(binding.toolbar) {
             setNavigationOnClickListener {
+                saveDataToPreviousFragment("expandAppLayout", false)
                 navigateUp()
             }
         }

@@ -13,6 +13,7 @@ import reynold.project.taipeizoo.ui.adapter.AreaListAdapter
 import reynold.project.taipeizoo.ui.base.BaseFragment
 import reynold.project.taipeizoo.ui.mvp.AreaListContract
 import reynold.project.taipeizoo.ui.mvp.AreaListFragmentPresenter
+import reynold.project.taipeizoo.util.navigateFragment
 
 class AreaListFragment : BaseFragment<FragmentAreaListBinding, AreaListContract.AreaListFragmentView, AreaListContract.AreaListFragmentPresenter>(),
     AreaListContract.AreaListFragmentView {
@@ -44,7 +45,10 @@ class AreaListFragment : BaseFragment<FragmentAreaListBinding, AreaListContract.
     }
 
     override fun showLoading() {
-        binding.shimmerLayout.startShimmer()
+        binding.shimmerLayout.apply {
+            startShimmer()
+            isVisible = true
+        }
     }
 
     override fun hideLoading() {

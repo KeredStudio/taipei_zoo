@@ -5,7 +5,7 @@
     android:id="@+id/nav_taipei_zoo"
     app:startDestination="@id/area_list_fragment">
 
-    <keep_state_fragment
+    <fragment
         android:id="@+id/area_list_fragment"
         android:name="reynold.project.taipeizoo.ui.fragment.AreaListFragment"
         android:label="AreaListFragment"
@@ -21,9 +21,9 @@
                 android:name="areaDetail"
                 app:argType="reynold.project.taipeizoo.models.AreaList$Result$Detail" />
         </action>
-    </keep_state_fragment>
+    </fragment>
 
-    <keep_state_fragment
+    <fragment
         android:id="@+id/area_detail_fragment"
         android:name="reynold.project.taipeizoo.ui.fragment.AreaDetailFragment"
         android:label="AreaDetailFragment"
@@ -42,9 +42,9 @@
                 android:name="plantDetail"
                 app:argType="reynold.project.taipeizoo.models.PlantList$Result$Detail" />
         </action>
-    </keep_state_fragment>
+    </fragment>
 
-    <keep_state_fragment
+    <fragment
         android:id="@+id/plant_detail_fragment"
         android:name="reynold.project.taipeizoo.ui.fragment.PlantDetailFragment"
         android:label="PlantDetailFragment"
@@ -52,6 +52,6 @@
         <argument
             android:name="plantDetail"
             app:argType="reynold.project.taipeizoo.models.PlantList$Result$Detail" />
-    </keep_state_fragment>
+    </fragment>
 
 </navigation>

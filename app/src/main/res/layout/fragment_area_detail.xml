@@ -17,6 +17,7 @@
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/area_detail_app_bar_height"
             android:background="?attr/colorAccent"
@@ -116,12 +117,12 @@
                     android:id="@+id/shimmer_layout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/plant_detail_title"
                     app:shimmerItemCount="5"
-                    app:shimmerItemLayout="@layout/list_item_shimmer"
-                    tools:visibility="gone" />
+                    app:shimmerItemLayout="@layout/list_item_shimmer" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/plant_list_recycler_view"

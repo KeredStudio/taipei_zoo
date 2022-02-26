@@ -40,18 +40,4 @@ abstract class BaseFragment<DB : ViewDataBinding, V : BaseMvpView, P : BaseMvpPr
     abstract fun createPresenter(): P
     abstract fun setupViews()
     abstract fun startApiCall()
-
-    fun navigateFragment(action: NavDirections) {
-        GlobalScope.launch(Dispatchers.Main) {
-            delay(300) // waiting for clicking ripple animation for better user experience
-            findNavController().navigate(action)
-        }
-    }
-
-    fun navigateUp() {
-        GlobalScope.launch(Dispatchers.Main) {
-            delay(100)
-            findNavController().navigateUp()
-        }
-    }
 }

@@ -58,11 +58,14 @@
 
                 <reynold.project.taipeizoo.ui.widget.CustomShimmerLayout
                     android:id="@+id/shimmer_layout"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:shimmerItemCount="10"
-                    app:shimmerItemLayout="@layout/list_item_shimmer"
-                    tools:visibility="gone" />
+                    app:shimmerItemLayout="@layout/list_item_shimmer" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/area_list_recycler_view"
@@ -70,6 +73,9 @@
                     android:layout_height="match_parent"
                     android:nestedScrollingEnabled="false"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:listitem="@layout/list_item_area" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
