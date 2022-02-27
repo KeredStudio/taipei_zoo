@@ -5,7 +5,7 @@
     <color name="blue_gray_700">#455A64</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="description">#2F2F2F</color>
+    <color name="description">#80000000</color>
     <color name="divider">#E5E5E5</color>
     <color name="alpha_white">#DE000000</color>
     <color name="gray_50">#FAFAFA</color>

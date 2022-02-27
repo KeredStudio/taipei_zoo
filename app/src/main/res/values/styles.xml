@@ -8,6 +8,8 @@
         <item name="colorSurface">@color/gray_50</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
     <style name="TextAppearance.TaipeiZoo.Toolbar.Text" parent="TextAppearance.MaterialComponents.Headline5">

@@ -20,7 +20,7 @@
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/area_detail_app_bar_height"
-            android:background="?attr/colorAccent"
+            android:background="?attr/colorPrimary"
             android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -31,7 +31,7 @@
                 android:fitsSystemWindows="true"
                 app:collapsedTitleGravity="start"
                 app:collapsedTitleTextAppearance="@style/TextAppearance.TaipeiZoo.Toolbar.Text"
-                app:contentScrim="@color/blue_gray_700"
+                app:contentScrim="?attr/colorPrimary"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:statusBarScrim="@android:color/transparent"
                 app:title="@{areaDetail.EName}"
